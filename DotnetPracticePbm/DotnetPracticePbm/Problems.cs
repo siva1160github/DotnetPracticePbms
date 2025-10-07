@@ -4,7 +4,7 @@ namespace DotnetPracticePbm
 {
     public class Problems
     {
-        public void ReverseString()
+        public string ReverseString()
         {
             Console.WriteLine("Please Enter the String");
             string input = Console.ReadLine();
@@ -13,7 +13,25 @@ namespace DotnetPracticePbm
             {
                 output.Append(input[i]);
             }
-            Console.WriteLine(output.ToString());
+            return output.ToString();
+        }
+
+        public bool CheckPalindrome()
+        {
+            Console.WriteLine("Enter the String");
+            string input = Console.ReadLine();
+            int left = 0;
+            int right = input.Length - 1;
+            while (left < right)
+            {
+                if (input[left] != input[right])
+                {
+                    return false;
+                }
+                left++;
+                right--;
+            }
+            return true;
         }
     }
 }
