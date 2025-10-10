@@ -33,5 +33,48 @@ namespace DotnetPracticePbm
             }
             return true;
         }
+
+        public bool CheckIntegerPalindrome()
+        {
+            Console.WriteLine("Enter the Number");
+            int input = int.Parse(Console.ReadLine());
+            int input1 = input;
+            int reverseInput = 0;
+            while (input1 > 0)
+            {
+                reverseInput = reverseInput * 10 + (input1 % 10);
+                input1 = input1 / 10;
+            }
+
+            return reverseInput == input;
+        }
+
+        public int SecondLargestNumber()
+        {
+            Console.WriteLine("Enter the size of the array");
+            int size = int.Parse(Console.ReadLine());
+            int[] array = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            int max = array[0];
+            int secondMax = max;
+            for (int i = 1; i < size; i++)
+            {
+                if (array[i] > max)
+                {
+                    secondMax = max;
+                    max = array[i];
+                }
+                else if (array[i] > secondMax)
+                {
+                    secondMax = array[i];
+                }
+            }
+
+            return secondMax;
+        }
     }
 }
