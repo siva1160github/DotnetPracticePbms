@@ -76,5 +76,20 @@ namespace DotnetPracticePbm
 
             return secondMax;
         }
+
+        public int MissingNumberInArray()
+        {
+            Console.WriteLine("Enter the size of the array");
+            int size = int.Parse(Console.ReadLine());
+            int[] array = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            int actualSum = (size + 1) * (size + 2) / 2;
+
+            return actualSum - array.Sum();
+        }
     }
 }

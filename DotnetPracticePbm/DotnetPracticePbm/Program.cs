@@ -6,6 +6,7 @@ static void Functionality()
     Console.WriteLine("2.String Palindrome");
     Console.WriteLine("3.Integer Palindrome");
     Console.WriteLine("4.Second Largest Number");
+    Console.WriteLine("5.Missing Number In Array");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -21,6 +22,9 @@ static void Functionality()
             break;
         case 4:
             Console.WriteLine(problem.SecondLargestNumber());
+            break;
+        case 5:
+            Console.WriteLine(problem.MissingNumberInArray());
             break;
     }
     Functionality();
