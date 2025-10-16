@@ -7,6 +7,7 @@ static void Functionality()
     Console.WriteLine("3.Integer Palindrome");
     Console.WriteLine("4.Second Largest Number");
     Console.WriteLine("5.Missing Number In Array");
+    Console.WriteLine("6.CommonElementsInArray");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -25,6 +26,9 @@ static void Functionality()
             break;
         case 5:
             Console.WriteLine(problem.MissingNumberInArray());
+            break;
+        case 6:
+            Console.WriteLine(problem.CommonElementsInArray());
             break;
     }
     Functionality();

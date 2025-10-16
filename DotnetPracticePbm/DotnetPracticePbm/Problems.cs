@@ -91,5 +91,29 @@ namespace DotnetPracticePbm
 
             return actualSum - array.Sum();
         }
+
+        public int[] CommonElementsInArray()
+        {
+            int[] array1 = [1, 3, 4, 5, 6];
+            int[] array2 = [2, 4, 6, 8, 10, 3];
+
+            List<int> duplicates = [];
+
+            Dictionary<int, int> dict = [];
+            for (int i = 0; i < array1.Length; i++)
+            {
+                dict.Add(array1[i], 1);
+            }
+
+            for (int i = 0; i < array2.Length; i++)
+            {
+                if (!dict.TryAdd(array2[i], 1))
+                {
+                    duplicates.Add(array2[i]);
+                }
+            }
+
+            return [.. duplicates];
+        }
     }
 }
