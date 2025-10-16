@@ -115,5 +115,18 @@ namespace DotnetPracticePbm
 
             return [.. duplicates];
         }
+
+        public int CountDigits()
+        {
+            Console.WriteLine("Enter the Integer");
+            int input = int.Parse(Console.ReadLine());
+            int count = 0;
+            while (input > 0)
+            {
+                input /= 10;
+                count++;
+            }
+            return count;
+        }
     }
 }

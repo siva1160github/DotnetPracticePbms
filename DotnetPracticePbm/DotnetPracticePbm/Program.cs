@@ -8,6 +8,7 @@ static void Functionality()
     Console.WriteLine("4.Second Largest Number");
     Console.WriteLine("5.Missing Number In Array");
     Console.WriteLine("6.CommonElementsInArray");
+    Console.WriteLine("7.Count Digits in an Integer");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -29,6 +30,9 @@ static void Functionality()
             break;
         case 6:
             Console.WriteLine(problem.CommonElementsInArray());
+            break;
+        case 7:
+            Console.WriteLine(problem.CountDigits());
             break;
     }
     Functionality();
