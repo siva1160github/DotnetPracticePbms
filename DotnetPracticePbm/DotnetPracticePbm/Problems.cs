@@ -128,5 +128,19 @@ namespace DotnetPracticePbm
             }
             return count;
         }
+
+        public bool ContainsDigits()
+        {
+            Console.WriteLine("Enter the String");
+            string input = Console.ReadLine();
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (!char.IsDigit(input[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

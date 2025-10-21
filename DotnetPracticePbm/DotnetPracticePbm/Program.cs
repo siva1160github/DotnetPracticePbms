@@ -9,6 +9,7 @@ static void Functionality()
     Console.WriteLine("5.Missing Number In Array");
     Console.WriteLine("6.CommonElementsInArray");
     Console.WriteLine("7.Count Digits in an Integer");
+    Console.WriteLine("8.Check String Contains Digits");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -33,6 +34,9 @@ static void Functionality()
             break;
         case 7:
             Console.WriteLine(problem.CountDigits());
+            break;
+        case 8:
+            Console.WriteLine(problem.ContainsDigits());
             break;
     }
     Functionality();
