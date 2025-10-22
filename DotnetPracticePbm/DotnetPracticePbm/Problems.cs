@@ -142,5 +142,31 @@ namespace DotnetPracticePbm
             }
             return true;
         }
+
+        public string ReverseWordsInSentence()
+        {
+            Console.WriteLine("Enter the sentence");
+            string input = Console.ReadLine();
+            int end = input.Length - 1;
+            StringBuilder output = new();
+            for (int i = end; i >= 0; i--)
+            {
+                if (input[i] == ' ')
+                {
+                    for (int j = i + 1; j <= end; j++)
+                    {
+                        output.Append(input[j]);
+                    }
+                    end = i - 1;
+                    output.Append(' ');
+                }
+            }
+
+            for (int i = 0; i <= end; i++)
+            {
+                output.Append(input[i]);
+            }
+            return output.ToString();
+        }
     }
 }
