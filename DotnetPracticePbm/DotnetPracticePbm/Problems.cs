@@ -168,5 +168,27 @@ namespace DotnetPracticePbm
             }
             return output.ToString();
         }
+
+        public bool Contains()
+        {
+            Console.WriteLine("Enter the sentence");
+            string input = Console.ReadLine();
+            Console.WriteLine("Enter the search string");
+            string search = Console.ReadLine();
+            int j = 0;
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i] == search[j])
+                {
+                    j++;
+                    if (j == search.Length)
+                    {
+                        return true;
+                    }
+                }
+                else { j = 0; }
+            }
+            return false;
+        }
     }
 }

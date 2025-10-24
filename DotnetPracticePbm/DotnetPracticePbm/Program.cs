@@ -11,6 +11,7 @@ static void Functionality()
     Console.WriteLine("7.Count Digits in an Integer");
     Console.WriteLine("8.Check String Contains Digits");
     Console.WriteLine("9.Reverse words in a sentence");
+    Console.WriteLine("10.OwnContains");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -41,6 +42,9 @@ static void Functionality()
             break;
         case 9:
             Console.WriteLine(problem.ReverseWordsInSentence());
+            break;
+        case 10:
+            Console.WriteLine(problem.Contains());
             break;
     }
     Functionality();
