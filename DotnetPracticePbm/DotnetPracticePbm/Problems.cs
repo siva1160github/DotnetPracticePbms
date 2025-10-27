@@ -190,5 +190,26 @@ namespace DotnetPracticePbm
             }
             return false;
         }
+
+        public char FirstNonRepCharacter()
+        {
+            Console.WriteLine("Enter the word");
+            string word = Console.ReadLine();
+            Dictionary<char, int> dict = [];
+            for (int i = 0; i < word.Length; i++)
+            {
+                dict[word[i]] = dict.GetValueOrDefault(word[i], 0) + 1;
+            }
+
+            foreach (var pair in dict)
+            {
+                if (pair.Value == 1)
+                {
+                    return pair.Key;
+                }
+            }
+
+            return '\0';
+        }
     }
 }

@@ -12,6 +12,7 @@ static void Functionality()
     Console.WriteLine("8.Check String Contains Digits");
     Console.WriteLine("9.Reverse words in a sentence");
     Console.WriteLine("10.OwnContains");
+    Console.WriteLine("11.First non-repeated character");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -45,6 +46,9 @@ static void Functionality()
             break;
         case 10:
             Console.WriteLine(problem.Contains());
+            break;
+        case 11:
+            Console.WriteLine(problem.FirstNonRepCharacter());
             break;
     }
     Functionality();
