@@ -211,5 +211,26 @@ namespace DotnetPracticePbm
 
             return '\0';
         }
+
+        public int Factorial()
+        {
+            Console.WriteLine("Enter the number");
+            int input = int.Parse(Console.ReadLine());
+            int fact = 1;
+            for (int i = 1; i <= input; i++)
+            {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        public int FactorialRecursion(int input)
+        {
+            if (input > 1)
+            {
+                return input * FactorialRecursion(input - 1);
+            }
+            return input;
+        }
     }
 }

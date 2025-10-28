@@ -13,6 +13,8 @@ static void Functionality()
     Console.WriteLine("9.Reverse words in a sentence");
     Console.WriteLine("10.OwnContains");
     Console.WriteLine("11.First non-repeated character");
+    Console.WriteLine("12.Factorial");
+    Console.WriteLine("12.FactorialRecursion");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -49,6 +51,14 @@ static void Functionality()
             break;
         case 11:
             Console.WriteLine(problem.FirstNonRepCharacter());
+            break;
+        case 12:
+            Console.WriteLine(problem.Factorial());
+            break;
+        case 13:
+            Console.WriteLine("Enter the number");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine(problem.FactorialRecursion(n));
             break;
     }
     Functionality();
