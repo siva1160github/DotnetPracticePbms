@@ -237,14 +237,16 @@ namespace DotnetPracticePbm
         {
             int next = 1;
             int prev = 0;
+            int output = 0;
             Console.WriteLine("Enter the number");
             int input = int.Parse(Console.ReadLine());
             for (int i = 1; i <= input; i++)
             {
-                next = prev + next;
+                output = prev + next;
                 prev = next;
+                next = output;
             }
-            return next;
+            return output;
         }
     }
 }
