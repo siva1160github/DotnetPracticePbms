@@ -248,5 +248,26 @@ namespace DotnetPracticePbm
             }
             return output;
         }
+
+        public void DuplicateCharsInString()
+        {
+            Console.WriteLine("Enter the String");
+            string input = Console.ReadLine();
+            HashSet<char> dummy = [];
+            HashSet<char> duplicate = [];
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (!dummy.Add(input[i]))
+                {
+                    duplicate.Add(input[i]);
+                }
+            }
+
+            Console.WriteLine($"The duplicate chars in {input} are");
+            foreach (char c in duplicate)
+            {
+                Console.WriteLine(c);
+            }
+        }
     }
 }

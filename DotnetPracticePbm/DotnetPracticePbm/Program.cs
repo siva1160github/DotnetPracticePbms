@@ -16,6 +16,7 @@ static void Functionality()
     Console.WriteLine("12.Factorial");
     Console.WriteLine("13.FactorialRecursion");
     Console.WriteLine("14.Fibonacci");
+    Console.WriteLine("15.DuplicateCharsInString");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -63,6 +64,9 @@ static void Functionality()
             break;
         case 14:
             Console.WriteLine(problem.Fibonacci());
+            break;
+        case 15:
+            problem.DuplicateCharsInString();
             break;
     }
     Functionality();
