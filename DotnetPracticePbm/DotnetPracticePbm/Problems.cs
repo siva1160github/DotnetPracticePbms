@@ -232,5 +232,19 @@ namespace DotnetPracticePbm
             }
             return input;
         }
+
+        public int Fibonacci()
+        {
+            int next = 1;
+            int prev = 0;
+            Console.WriteLine("Enter the number");
+            int input = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= input; i++)
+            {
+                next = prev + next;
+                prev = next;
+            }
+            return next;
+        }
     }
 }

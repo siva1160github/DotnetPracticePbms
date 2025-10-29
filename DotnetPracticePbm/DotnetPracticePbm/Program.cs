@@ -14,7 +14,8 @@ static void Functionality()
     Console.WriteLine("10.OwnContains");
     Console.WriteLine("11.First non-repeated character");
     Console.WriteLine("12.Factorial");
-    Console.WriteLine("12.FactorialRecursion");
+    Console.WriteLine("13.FactorialRecursion");
+    Console.WriteLine("14.Fibonacci");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -59,6 +60,9 @@ static void Functionality()
             Console.WriteLine("Enter the number");
             int n = int.Parse(Console.ReadLine());
             Console.WriteLine(problem.FactorialRecursion(n));
+            break;
+        case 14:
+            Console.WriteLine(problem.Fibonacci());
             break;
     }
     Functionality();
