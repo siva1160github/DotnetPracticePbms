@@ -269,5 +269,24 @@ namespace DotnetPracticePbm
                 Console.WriteLine(c);
             }
         }
+
+        public void RemoveDuplicatesInArray()
+        {
+            Console.WriteLine("Enter the array size");
+            int input = int.Parse(Console.ReadLine());
+            int[] array = new int[input];
+            for (int i = 0; i < input; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            HashSet<int> set = [.. array];
+            array = [.. set];
+            Console.WriteLine("The Array after removal of duplicates: ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+        }
     }
 }
