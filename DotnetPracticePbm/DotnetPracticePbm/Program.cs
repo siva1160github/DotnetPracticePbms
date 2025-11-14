@@ -19,6 +19,7 @@ static void Functionality()
     Console.WriteLine("15.DuplicateCharsInString");
     Console.WriteLine("16.RemoveDuplicatesInArray");
     Console.WriteLine("17.FizzBuzz");
+    Console.WriteLine("18.LongestWordInSentence");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -75,6 +76,9 @@ static void Functionality()
             break;
         case 17:
             problem.FizzBuzz();
+            break;
+        case 18:
+            problem.LongestWordInSentence();
             break;
     }
     Functionality();

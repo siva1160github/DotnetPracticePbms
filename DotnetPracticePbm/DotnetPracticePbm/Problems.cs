@@ -310,5 +310,41 @@ namespace DotnetPracticePbm
                 Console.WriteLine("No");
             }
         }
+
+        public void LongestWordInSentence()
+        {
+            Console.WriteLine("Enter the Sentence");
+            string sentence = Console.ReadLine();
+            int longest = 0;
+            string word = string.Empty;
+            int count = 0;
+            StringBuilder sb = new();
+
+            for (int i = 0; i < sentence.Length; i++)
+            {
+                if (sentence[i] == ' ')
+                {
+                    if (count > longest)
+                    {
+                        longest = count;
+                        word = sb.ToString();
+                    }
+                    count = 0;
+                    sb = new();
+                }
+                else
+                {
+                    sb.Append(sentence[i]);
+                    count++;
+                }
+            }
+
+            if (count > longest)
+            {
+                word = sb.ToString();
+            }
+
+            Console.WriteLine($"The longest word in sentence is {word}");
+        }
     }
 }
