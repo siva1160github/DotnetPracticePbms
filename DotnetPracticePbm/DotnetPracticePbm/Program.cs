@@ -18,6 +18,7 @@ static void Functionality()
     Console.WriteLine("14.Fibonacci");
     Console.WriteLine("15.DuplicateCharsInString");
     Console.WriteLine("16.RemoveDuplicatesInArray");
+    Console.WriteLine("17.FizzBuzz");
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -71,6 +72,9 @@ static void Functionality()
             break;
         case 16:
             problem.RemoveDuplicatesInArray();
+            break;
+        case 17:
+            problem.FizzBuzz();
             break;
     }
     Functionality();
