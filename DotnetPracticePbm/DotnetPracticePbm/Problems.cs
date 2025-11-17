@@ -346,5 +346,49 @@ namespace DotnetPracticePbm
 
             Console.WriteLine($"The longest word in sentence is {word}");
         }
+
+        public void RightRotateArrayKPos()
+        {
+            Console.WriteLine("Enter the array size");
+            int size = int.Parse(Console.ReadLine());
+            int[] array = new int[size];
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Enter the k positions");
+            int k = int.Parse(Console.ReadLine());
+            Array.Reverse(array);
+            Array.Reverse(array, 0, k);
+            Array.Reverse(array, k, array.Length - k);
+            Console.WriteLine("Array elements after reversing");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+        }
+
+        public void LeftRotateArrayKPos()
+        {
+            Console.WriteLine("Enter the array size");
+            int size = int.Parse(Console.ReadLine());
+            int[] array = new int[size];
+            Console.WriteLine("Enter the elements");
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Enter the k positions");
+            int k = int.Parse(Console.ReadLine());
+            Array.Reverse(array, 0, k);
+            Array.Reverse(array, k, array.Length - k);
+            Array.Reverse(array);
+            Console.WriteLine("Array elements after reversing");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+        }
     }
 }
