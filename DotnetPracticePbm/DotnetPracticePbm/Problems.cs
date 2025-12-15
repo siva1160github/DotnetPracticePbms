@@ -390,5 +390,32 @@ namespace DotnetPracticePbm
                 Console.WriteLine(array[i]);
             }
         }
+
+        public void DuplicateElementsInArray()
+        {
+            Console.WriteLine("Enter the size of the array");
+            int size = int.Parse(Console.ReadLine());
+            int[] array = new int[size];
+            Console.WriteLine("Enter the array elements");
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            Dictionary<int, int> dict = [];
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (!dict.TryAdd(array[i], 1))
+                {
+                    dict[array[i]]++;
+                }
+            }
+
+            Console.WriteLine("The duplicate elements are ");
+            foreach (var pair in dict.Where(x => x.Value > 1))
+            {
+                Console.WriteLine(pair.Key);
+            }
+        }
     }
 }

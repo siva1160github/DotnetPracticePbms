@@ -22,6 +22,8 @@ static void Functionality()
     Console.WriteLine("18.LongestWordInSentence");
     Console.WriteLine("19.RightRotateArrayKPos");
     Console.WriteLine("20.LeftRotateArrayKPos");
+    Console.WriteLine("21.DuplicateElementsInArray");
+
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
     switch (input)
@@ -87,6 +89,9 @@ static void Functionality()
             break;
         case 20:
             problem.LeftRotateArrayKPos();
+            break;
+        case 21:
+            problem.DuplicateElementsInArray();
             break;
     }
     Functionality();
