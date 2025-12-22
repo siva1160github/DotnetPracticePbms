@@ -23,6 +23,8 @@ static void Functionality()
     Console.WriteLine("19.RightRotateArrayKPos");
     Console.WriteLine("20.LeftRotateArrayKPos");
     Console.WriteLine("21.DuplicateElementsInArray");
+    Console.WriteLine("22.StackList");
+    Console.WriteLine("23.StackArray");
 
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
@@ -92,6 +94,12 @@ static void Functionality()
             break;
         case 21:
             problem.DuplicateElementsInArray();
+            break;
+        case 22:
+            problem.StackList();
+            break;
+        case 23:
+            problem.StackArray();
             break;
     }
     Functionality();

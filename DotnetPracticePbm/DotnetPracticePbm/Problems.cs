@@ -417,5 +417,20 @@ namespace DotnetPracticePbm
                 Console.WriteLine(pair.Key);
             }
         }
+
+        public void StackList()
+        {
+            List<int> list = [];
+            list.Add(5); //push
+            list.Add(6);
+            list.Add(7);
+
+            if (list.Count > 0)
+                list.RemoveAt(list.Count - 1); //pop
+
+            int? top = list.Count > 0 ? list[^1] : null; //peek
+
+            bool isEmpty = list.Count == 0; //empty check
+        }
     }
 }
