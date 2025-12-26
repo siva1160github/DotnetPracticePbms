@@ -25,6 +25,7 @@ static void Functionality()
     Console.WriteLine("21.DuplicateElementsInArray");
     Console.WriteLine("22.StackList");
     Console.WriteLine("23.ReverseLinkedList");
+    Console.WriteLine("24.Find Middle Node in LinkedList");
 
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
@@ -100,6 +101,9 @@ static void Functionality()
             break;
         case 23:
             problem.ReverseLinkedList();
+            break;
+        case 24:
+            problem.FindMiddleNode();
             break;
     }
     Functionality();

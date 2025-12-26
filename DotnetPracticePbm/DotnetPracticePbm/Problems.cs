@@ -447,5 +447,25 @@ namespace DotnetPracticePbm
                 reverseList.AddFirst(node);
             }
         }
+
+        public void FindMiddleNode()
+        {
+            LinkedList<string> list = new();
+            list.AddLast("AB");
+            list.AddLast("BC");
+            list.AddLast("CD");
+            list.AddLast("DE");
+            list.AddLast("EF");
+
+            LinkedListNode<string> slow = list.First;
+            LinkedListNode<string> fast = list.First;
+
+            while (fast != null && fast.Next != null)
+            {
+                slow = slow.Next;
+                fast = fast.Next.Next;
+            }
+            Console.WriteLine($"The middle node is {slow.Value}");
+        }
     }
 }
