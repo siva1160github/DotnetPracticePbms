@@ -467,5 +467,41 @@ namespace DotnetPracticePbm
             }
             Console.WriteLine($"The middle node is {slow.Value}");
         }
+
+        public void BinarySearch()
+        {
+            int[] array = [5, 6, 7, 8, 9];
+            int find = 6;
+            int left = 0;
+            int right = array.Length - 1;
+            int position = -1;
+
+            while (left <= right)
+            {
+                int middle = left + (right - left) / 2;
+                if (find == array[middle])
+                {
+                    position = middle;
+                    break;
+                }
+                else if (array[middle] < find)
+                {
+                    left = middle + 1;
+                }
+                else
+                {
+                    right = middle - 1;
+                }
+            }
+
+            if (position != -1)
+            {
+                Console.WriteLine($"The element {find} exists in index {position}");
+            }
+            else
+            {
+                Console.WriteLine($"The element {find} is not found");
+            }
+        }
     }
 }

@@ -26,6 +26,7 @@ static void Functionality()
     Console.WriteLine("22.StackList");
     Console.WriteLine("23.ReverseLinkedList");
     Console.WriteLine("24.Find Middle Node in LinkedList");
+    Console.WriteLine("25.BinarySearch");
 
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
@@ -104,6 +105,9 @@ static void Functionality()
             break;
         case 24:
             problem.FindMiddleNode();
+            break;
+        case 25:
+            problem.BinarySearch();
             break;
     }
     Functionality();
