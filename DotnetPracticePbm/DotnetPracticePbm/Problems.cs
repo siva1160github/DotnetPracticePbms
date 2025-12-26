@@ -432,5 +432,20 @@ namespace DotnetPracticePbm
 
             bool isEmpty = list.Count == 0; //empty check
         }
+
+        public void ReverseLinkedList()
+        {
+            LinkedList<int> list = new();
+            list.AddLast(5);
+            list.AddLast(6);
+            list.AddLast(7);
+            list.AddFirst(4);
+
+            LinkedList<int> reverseList = new();
+            foreach (var node in list)
+            {
+                reverseList.AddFirst(node);
+            }
+        }
     }
 }

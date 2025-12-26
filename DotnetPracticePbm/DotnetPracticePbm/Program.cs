@@ -24,7 +24,7 @@ static void Functionality()
     Console.WriteLine("20.LeftRotateArrayKPos");
     Console.WriteLine("21.DuplicateElementsInArray");
     Console.WriteLine("22.StackList");
-    Console.WriteLine("23.StackArray");
+    Console.WriteLine("23.ReverseLinkedList");
 
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
@@ -99,7 +99,7 @@ static void Functionality()
             problem.StackList();
             break;
         case 23:
-            problem.StackArray();
+            problem.ReverseLinkedList();
             break;
     }
     Functionality();
