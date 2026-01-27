@@ -230,7 +230,7 @@ namespace DotnetPracticePbm
             {
                 return input * FactorialRecursion(input - 1);
             }
-            return input;
+            return 1;
         }
 
         public int Fibonacci()
@@ -502,6 +502,15 @@ namespace DotnetPracticePbm
             {
                 Console.WriteLine($"The element {find} is not found");
             }
+        }
+
+        public int FibonacciRecursion(int input)
+        {
+            if (input > 2)
+            {
+                return FibonacciRecursion(input - 1) + FibonacciRecursion(input - 2);
+            }
+            return input;
         }
     }
 }

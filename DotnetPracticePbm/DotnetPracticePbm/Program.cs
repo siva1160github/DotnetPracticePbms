@@ -27,6 +27,7 @@ static void Functionality()
     Console.WriteLine("23.ReverseLinkedList");
     Console.WriteLine("24.Find Middle Node in LinkedList");
     Console.WriteLine("25.BinarySearch");
+    Console.WriteLine("26.FibonacciRecursion");
 
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
@@ -108,6 +109,11 @@ static void Functionality()
             break;
         case 25:
             problem.BinarySearch();
+            break;
+        case 26:
+            Console.WriteLine("Enter the input");
+            int input1 = int.Parse(Console.ReadLine());
+            Console.WriteLine(problem.FibonacciRecursion(input1));
             break;
     }
     Functionality();
