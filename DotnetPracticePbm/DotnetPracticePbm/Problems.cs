@@ -512,5 +512,32 @@ namespace DotnetPracticePbm
             }
             return input;
         }
+
+        public void ArrayPalindrome()
+        {
+            bool isPalindrome = true;
+            Console.WriteLine("Enter the array size");
+            _ = int.TryParse(Console.ReadLine(), out int size);
+            int[] array = new int[size];
+
+            Console.WriteLine("Enter the array elements");
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            int end = array.Length - 1;
+            for (int start = 0; start < array.Length / 2; start++)
+            {
+                if (array[start] != array[end])
+                {
+                    isPalindrome = false;
+                    break;
+                }
+                end--;
+            }
+
+            Console.WriteLine(isPalindrome ? "Array is palindrome" : "Array is not palindrome");
+        }
     }
 }

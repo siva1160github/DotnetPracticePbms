@@ -28,6 +28,7 @@ static void Functionality()
     Console.WriteLine("24.Find Middle Node in LinkedList");
     Console.WriteLine("25.BinarySearch");
     Console.WriteLine("26.FibonacciRecursion");
+    Console.WriteLine("27.ArrayPalindrome");
 
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
@@ -114,6 +115,9 @@ static void Functionality()
             Console.WriteLine("Enter the input");
             int input1 = int.Parse(Console.ReadLine());
             Console.WriteLine(problem.FibonacciRecursion(input1));
+            break;
+        case 27:
+            problem.ArrayPalindrome();
             break;
     }
     Functionality();
