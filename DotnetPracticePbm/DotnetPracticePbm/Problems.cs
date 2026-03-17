@@ -539,5 +539,28 @@ namespace DotnetPracticePbm
 
             Console.WriteLine(isPalindrome ? "Array is palindrome" : "Array is not palindrome");
         }
+
+        public void LettersCount()
+        {
+            Console.WriteLine("Enter the word");
+            string input = Console.ReadLine();
+            char charc = input[0];
+            int count = 0;
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (i != 0 && input[i] != charc)
+                {
+                    Console.Write($"{count}{charc}");
+                    count = 0;
+                    charc = input[i];
+                }
+                count++;
+                if (i == input.Length - 1)
+                {
+                    Console.Write($"{count}{charc}");
+                }
+            }
+            Console.WriteLine();
+        }
     }
 }

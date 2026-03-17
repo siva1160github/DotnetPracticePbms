@@ -29,6 +29,7 @@ static void Functionality()
     Console.WriteLine("25.BinarySearch");
     Console.WriteLine("26.FibonacciRecursion");
     Console.WriteLine("27.ArrayPalindrome");
+    Console.WriteLine("28.CountLetters");
 
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
@@ -118,6 +119,9 @@ static void Functionality()
             break;
         case 27:
             problem.ArrayPalindrome();
+            break;
+        case 28:
+            problem.LettersCount();
             break;
     }
     Functionality();
