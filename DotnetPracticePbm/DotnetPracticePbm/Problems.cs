@@ -562,5 +562,37 @@ namespace DotnetPracticePbm
             }
             Console.WriteLine();
         }
+
+        public void ValidParenthesis()
+        {
+            bool isValid = true;
+            Console.WriteLine("Enter the string");
+            string input = Console.ReadLine();
+            Stack<char> stack = new();
+            foreach (char c in input)
+            {
+                if (c == '(')
+                {
+                    stack.Push(')');
+                }
+                else if (c == '[')
+                {
+                    stack.Push(']');
+                }
+                else if (c == '{')
+                {
+                    stack.Push('}');
+                }
+                else
+                {
+                    if (stack.Count == 0 || stack.Pop() != c)
+                    {
+                        isValid = false;
+                        break;
+                    }
+                }
+            }
+            Console.WriteLine(isValid && stack.Count == 0);
+        }
     }
 }

@@ -30,6 +30,7 @@ static void Functionality()
     Console.WriteLine("26.FibonacciRecursion");
     Console.WriteLine("27.ArrayPalindrome");
     Console.WriteLine("28.CountLetters");
+    Console.WriteLine("29.ValidParenthesis");
 
     int input = int.Parse(Console.ReadLine());
     Problems problem = new();
@@ -122,6 +123,9 @@ static void Functionality()
             break;
         case 28:
             problem.LettersCount();
+            break;
+        case 29:
+            problem.ValidParenthesis();
             break;
     }
     Functionality();
